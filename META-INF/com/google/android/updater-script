@@ -1,9 +1,22 @@
+#Kali NetHunter Uninstaller V1.0
+#Creator: Mominul Islam Hemal
+#Concept Taken From  @FeLLzMODs's Miui Debloatware
+
+#For A/B and A devices
+#Working Chroot : kali-arm64 full and Kali-armhf full
+
 ui_print(" ");
 ui_print("====================================================");
-ui_print("=          KaliNetHunter Remover v1.00             =");
+ui_print("=          KaliNetHunter Nuker v1.00             =");
 ui_print("=          Author: Mominul Islam                   =");
 
 ui_print("====================================================");
+
+
+#for A/B devices, system Path:"/system_root/system" or "/system_root"
+#for A devices, system Path :"/system" and "/system/system"
+#Data Path :"/data"
+
 
 show_progress(2.000000, 0);
 ui_print(" ");
