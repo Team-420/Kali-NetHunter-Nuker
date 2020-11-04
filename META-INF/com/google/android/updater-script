@@ -1,0 +1,180 @@
+ui_print(" ");
+ui_print("====================================================");
+ui_print("=          KaliNetHunter Remover v1.00             =");
+ui_print("=          Author: Mominul Islam                   =");
+
+ui_print("====================================================");
+
+show_progress(2.000000, 0);
+ui_print(" ");
+ui_print("Mounting filesystems...");
+package_extract_file("META-INF/com/busybox/busybox", "/tmp/busybox");
+run_program("/sbin/chmod", "777", "/tmp/busybox");
+run_program("/tmp/busybox", "mount", "/system_root/system");
+run_program("/tmp/busybox", "mount", "/system_root");
+run_program("/tmp/busybox", "mount", "/system/system");
+run_program("/tmp/busybox", "mount", "/system");
+run_program("/tmp/busybox", "mount", "/data");
+run_program("/sbin/busybox", "mount", "/system_root/system");
+run_program("/sbin/busybox", "mount", "/system_root");
+run_program("/sbin/busybox", "mount", "/system/system");
+run_program("/sbin/busybox", "mount", "/system");
+run_program("/sbin/busybox", "mount", "/data");
+run_program("/sbin/mount", "/system_root/system");
+run_program("/sbin/mount", "/system_root");
+run_program("/sbin/mount", "/system/system");
+run_program("/sbin/mount", "/system");
+run_program("/sbin/mount", "/data");
+ui_print("Staring Removing Process...");
+ui_print(" ");
+set_progress(0.100000);
+
+
+ui_print("- Removing Kali Nethunter");
+delete_recursive("/system_root/system/app/NetHunter");
+delete_recursive("/system/app/NetHunter");
+delete_recursive("/system/system/app/NetHunter");
+delete_recursive("/data/data/com.offsec.nethunter");
+
+
+ui_print("- Removing Nethunter-Terminal");
+delete_recursive("/system_root/system/app/NetHunter-Terminal");
+delete_recursive("/system/app/NetHunter-Terminal");
+delete_recursive("/system/system/app/NetHunter-Terminal");
+delete_recursive("/data/data/com.offsec.nhterm");
+
+ui_print("- Removing Nethunter KeX");
+delete_recursive("/system_root/system/app/NetHunter-KeX");
+delete_recursive("/system/app/NetHunter-KeX");
+delete_recursive("/system/system/app/NetHunter-KeX");
+delete_recursive("/data/data/com.offsec.nethunter.kex");
+
+ui_print("- Removing Nethunter Store");
+delete_recursive("/system_root/system/app/NetHunter-Store");
+delete_recursive("/system/app/NetHunter-Store");
+delete_recursive("/system/system/app/NetHunter-Store");
+delete_recursive("/data/data/com.offsec.nethunter.store");
+
+ui_print("- Removing NetHunterStorePrivilegedExtension");
+delete_recursive("/system_root/system/priv-app/NetHunterStorePrivilegedExtension");
+delete_recursive("/system/priv-app/NetHunterStorePrivilegedExtension");
+
+delete_recursive("/system/system/priv-app/NetHunterStorePrivilegedExtension");
+delete_recursive("/system_root/system/etc/permissions/com.offsec.nethunter.store.privileged.xml");
+delete_recursive("/system/etc/permissions/com.offsec.nethunter.store.privileged.xml");
+delete_recursive("/system/system/etc/permissions/com.offsec.nethunter.store.privileged.xml");
+delete_recursive("/data/data/com.offsec.nethunter.store.privileged");
+
+ui_print("- Removing Kali Chroot");
+delete_recursive("/data/local/nhsystem");
+
+ui_print("- Removing Nano Binaries");
+delete_recursive("/system_root/system/etc/nano");
+delete_recursive("/system/etc/nano");
+delete_recursive("/system/system/etc/nano");
+
+ui_print("- Removing Terminfo");
+delete_recursive("/system_root/system/etc/terminfo");
+delete_recursive("/system/etc/terminfo");
+delete_recursive("/system/system/etc/terminfo");
+
+
+ui_print("- Removing Bootkali Scripts");
+delete_recursive("/system_root/system/bin/bootkali");
+delete_recursive("/system_root/system/bin/bootkali_init");
+delete_recursive("/system_root/system/bin/bootkali_bash");
+delete_recursive("/system_root/system/bin/bootkali_login");
+delete_recursive("/system_root/system/bin/killall");
+
+delete_recursive("/system/bin/bootkali");
+delete_recursive("/system/bin/bootkali_init");
+delete_recursive("/system/bin/bootkali_bash");
+delete_recursive("/system/bin/bootkali_login");
+delete_recursive("/system/bin/killall");
+
+delete_recursive("/system/system/bin/bootkali");
+delete_recursive("/system/system/bin/bootkali_init");
+delete_recursive("/system/system/bin/bootkali_bash");
+delete_recursive("/system/system/bin/bootkali_login");
+delete_recursive("/system/system/bin/killall");
+
+ui_print("- Removing Xbin and SBin Binaries");
+delete_recursive("/system_root/system/xbin/hid-keyboard");
+delete_recursive("/system_root/system/xbin/busybox_nh");
+delete_recursive("/system_root/sbin/usb_config.sh");
+
+delete_recursive("/system/xbin/hid-keyboard");
+delete_recursive("/system/xbin/busybox_nh");
+delete_recursive("/system/sbin/usb_config.sh");
+
+delete_recursive("/system/system/xbin/hid-keyboard");
+delete_recursive("/system/system/xbin/busybox_nh");
+delete_recursive("/system/system/sbin/usb_config.sh");
+delete_recursive("/sbin/usb_config.sh");
+
+
+ui_print("- Removing Firmwares");
+delete_recursive("/system_root/system/etc/firmware");
+delete_recursive("/system/etc/firmware");
+delete_recursive("/system/system/etc/firmware");
+
+
+ui_print("- Removing Bin Binaries");
+delete_recursive("/system_root/system/bin/lualibs");
+delete_recursive("/system/bin/lualibs");
+delete_recursive("/system/system/bin/lualibs");
+
+delete_recursive("/system_root/system/bin/scripts");
+delete_recursive("/system/bin/scripts");
+delete_recursive("/system/system/bin/scripts");
+
+
+
+ui_print("- Removing All Leftovers");
+delete_recursive("/system_root/system/80-nethunter.sh");
+delete_recursive("/system_root/system/etc/init.d");
+delete_recursive("/data/local/userinit.sh");
+delete_recursive("/data/local/userinit.d");
+delete_recursive("/system_root/init.nethunter.rc");
+
+delete_recursive("/system/80-nethunter.sh");
+delete_recursive("/system/etc/init.d");
+delete_recursive("/system/init.nethunter.rc");
+
+delete_recursive("/system/system/80-nethunter.sh");
+delete_recursive("/system/system/etc/init.d");
+delete_recursive("/system/init.nethunter.rc");
+
+delete_recursive("/init.nethunter.rc");
+
+
+
+
+set_progress(1.700000);
+
+ui_print(" ");
+set_progress(1.800000);
+set_progress(1.900000);
+ui_print("Unmounting filesystems...");
+run_program("/tmp/busybox", "umount", "/system_root/system");
+run_program("/tmp/busybox", "umount", "/system_root");
+run_program("/tmp/busybox", "umount", "/system/system");
+run_program("/tmp/busybox", "umount", "/system");
+run_program("/tmp/busybox", "umount", "/data");
+run_program("/sbin/busybox", "umount", "/system_root/system");
+run_program("/sbin/busybox", "umount", "/system_root");
+run_program("/sbin/busybox", "umount", "/system/system");
+run_program("/sbin/busybox", "umount", "/system");
+run_program("/sbin/busybox", "umount", "/data");
+run_program("/sbin/umount", "/system_root/system");
+run_program("/sbin/umount", "/system_root");
+run_program("/sbin/umount", "/system/system");
+run_program("/sbin/umount", "/system");
+run_program("/sbin/umount", "/data");
+set_progress(2.000000);
+ui_print(" ");
+ui_print("====================================================");
+ui_print("=         Kali NetHunter Nuked!                    =");
+ui_print("=         Go Sleep Now                             =");
+ui_print("====================================================");
+ui_print(" ");
