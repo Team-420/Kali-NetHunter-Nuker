@@ -35,6 +35,7 @@ delete_recursive("/system_root/system/app/NetHunter");
 delete_recursive("/system/app/NetHunter");
 delete_recursive("/system/system/app/NetHunter");
 delete_recursive("/data/data/com.offsec.nethunter");
+delete_recursive("/system_root/app/NetHunter");
 
 
 ui_print("- Removing Nethunter-Terminal");
@@ -42,28 +43,33 @@ delete_recursive("/system_root/system/app/NetHunter-Terminal");
 delete_recursive("/system/app/NetHunter-Terminal");
 delete_recursive("/system/system/app/NetHunter-Terminal");
 delete_recursive("/data/data/com.offsec.nhterm");
+delete_recursive("/system_root/app/NetHunter");
 
 ui_print("- Removing Nethunter KeX");
 delete_recursive("/system_root/system/app/NetHunter-KeX");
 delete_recursive("/system/app/NetHunter-KeX");
 delete_recursive("/system/system/app/NetHunter-KeX");
 delete_recursive("/data/data/com.offsec.nethunter.kex");
+delete_recursive("/system_root/app/NetHunter-KeX");
 
 ui_print("- Removing Nethunter Store");
 delete_recursive("/system_root/system/app/NetHunter-Store");
 delete_recursive("/system/app/NetHunter-Store");
 delete_recursive("/system/system/app/NetHunter-Store");
 delete_recursive("/data/data/com.offsec.nethunter.store");
+delete_recursive("/system_root/app/NetHunter-Store");
 
 ui_print("- Removing NetHunterStorePrivilegedExtension");
 delete_recursive("/system_root/system/priv-app/NetHunterStorePrivilegedExtension");
 delete_recursive("/system/priv-app/NetHunterStorePrivilegedExtension");
+delete_recursive("/system_root/priv-app/NetHunterStorePrivilegedExtension");
 
 delete_recursive("/system/system/priv-app/NetHunterStorePrivilegedExtension");
 delete_recursive("/system_root/system/etc/permissions/com.offsec.nethunter.store.privileged.xml");
 delete_recursive("/system/etc/permissions/com.offsec.nethunter.store.privileged.xml");
 delete_recursive("/system/system/etc/permissions/com.offsec.nethunter.store.privileged.xml");
 delete_recursive("/data/data/com.offsec.nethunter.store.privileged");
+delete_recursive("/system_root/priv-app/NetHunterStorePrivilegedExtension");
 
 ui_print("- Removing Kali Chroot");
 delete_recursive("/data/local/nhsystem");
@@ -72,12 +78,13 @@ ui_print("- Removing Nano Binaries");
 delete_recursive("/system_root/system/etc/nano");
 delete_recursive("/system/etc/nano");
 delete_recursive("/system/system/etc/nano");
+delete_recursive("/system_root/etc/nano");
 
 ui_print("- Removing Terminfo");
 delete_recursive("/system_root/system/etc/terminfo");
 delete_recursive("/system/etc/terminfo");
 delete_recursive("/system/system/etc/terminfo");
-
+delete_recursive("/system_root/etc/terminfo");
 
 ui_print("- Removing Bootkali Scripts");
 delete_recursive("/system_root/system/bin/bootkali");
@@ -98,6 +105,12 @@ delete_recursive("/system/system/bin/bootkali_bash");
 delete_recursive("/system/system/bin/bootkali_login");
 delete_recursive("/system/system/bin/killall");
 
+delete_recursive("/system_root/bin/bootkali");
+delete_recursive("/system_root/bin/bootkali_init");
+delete_recursive("/system_root/bin/bootkali_bash");
+delete_recursive("/system_root/bin/bootkali_login");
+delete_recursive("/system_root/bin/killall");
+
 ui_print("- Removing Xbin and SBin Binaries");
 delete_recursive("/system_root/system/xbin/hid-keyboard");
 delete_recursive("/system_root/system/xbin/busybox_nh");
@@ -112,22 +125,25 @@ delete_recursive("/system/system/xbin/busybox_nh");
 delete_recursive("/system/system/sbin/usb_config.sh");
 delete_recursive("/sbin/usb_config.sh");
 
+delete_recursive("/system_root/xbin/hid-keyboard");
+delete_recursive("/system_root/xbin/busybox_nh");
 
 ui_print("- Removing Firmwares");
 delete_recursive("/system_root/system/etc/firmware");
 delete_recursive("/system/etc/firmware");
 delete_recursive("/system/system/etc/firmware");
-
+delete_recursive("/system_root/etc/firmware");
 
 ui_print("- Removing Bin Binaries");
 delete_recursive("/system_root/system/bin/lualibs");
 delete_recursive("/system/bin/lualibs");
 delete_recursive("/system/system/bin/lualibs");
+delete_recursive("/system_root/bin/lualibs");
 
 delete_recursive("/system_root/system/bin/scripts");
 delete_recursive("/system/bin/scripts");
 delete_recursive("/system/system/bin/scripts");
-
+delete_recursive("/system_root/bin/scripts");
 
 
 ui_print("- Removing All Leftovers");
@@ -147,7 +163,9 @@ delete_recursive("/system/system/etc/init.d");
 delete_recursive("/init.nethunter.rc");
 
 
-
+delete_recursive("/system_root/80-nethunter.sh");
+delete_recursive("/system_root/etc/init.d");
+delete_recursive("/system/system/init.nethunter.rc");
 
 set_progress(1.700000);
 
