@@ -25,7 +25,7 @@ run_program("/sbin/mount", "/system_root");
 run_program("/sbin/mount", "/system/system");
 run_program("/sbin/mount", "/system");
 run_program("/sbin/mount", "/data");
-ui_print("Staring Removing Process...");
+ui_print("Starting Removal Process...");
 ui_print(" ");
 set_progress(0.100000);
 
@@ -143,7 +143,6 @@ delete_recursive("/system/init.nethunter.rc");
 
 delete_recursive("/system/system/80-nethunter.sh");
 delete_recursive("/system/system/etc/init.d");
-delete_recursive("/system/init.nethunter.rc");
 
 delete_recursive("/init.nethunter.rc");
 
