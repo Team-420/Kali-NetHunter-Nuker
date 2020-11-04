@@ -43,7 +43,7 @@ delete_recursive("/system_root/system/app/NetHunter-Terminal");
 delete_recursive("/system/app/NetHunter-Terminal");
 delete_recursive("/system/system/app/NetHunter-Terminal");
 delete_recursive("/data/data/com.offsec.nhterm");
-delete_recursive("/system_root/app/NetHunter");
+delete_recursive("/system_root/app/NetHunter-Terminal");
 
 ui_print("- Removing Nethunter KeX");
 delete_recursive("/system_root/system/app/NetHunter-KeX");
@@ -69,7 +69,7 @@ delete_recursive("/system_root/system/etc/permissions/com.offsec.nethunter.store
 delete_recursive("/system/etc/permissions/com.offsec.nethunter.store.privileged.xml");
 delete_recursive("/system/system/etc/permissions/com.offsec.nethunter.store.privileged.xml");
 delete_recursive("/data/data/com.offsec.nethunter.store.privileged");
-delete_recursive("/system_root/priv-app/NetHunterStorePrivilegedExtension");
+delete_recursive("/system_root/etc/permissions/com.offsec.nethunter.store.privileged.xml");
 
 ui_print("- Removing Kali Chroot");
 delete_recursive("/data/local/nhsystem");
