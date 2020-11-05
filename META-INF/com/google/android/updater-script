@@ -7,7 +7,7 @@
 
 ui_print(" ");
 ui_print("====================================================");
-ui_print("=          KaliNetHunter Nuker v1.00             =");
+ui_print("=          KaliNetHunter Nuker v1.00               =");
 ui_print("=          Author: Mominul Islam                   =");
 
 ui_print("====================================================");
